@@ -6,17 +6,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import web.servise.CarService;
 import web.servise.CarServicelmp;
 
 
 @Controller
 //@RequestMapping("/cars")
 public class CarsController {
-    private final CarServicelmp carServicelmp;
+    private final CarService carService;
 
     @Autowired
-    public CarsController(CarServicelmp carServicelmp) {
-        this.carServicelmp = carServicelmp;
+    public CarsController(CarService carService) {
+        this.carService= carService;
 
     }
 
